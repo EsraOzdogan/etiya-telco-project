@@ -1,3 +1,4 @@
+import { UserInfoComponent } from './components/user-info/user-info.component';
 import { SettingsMenuComponent } from './components/settings-menu/settings-menu.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,11 +13,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     OverlayTitleComponent,
     SideFilterComponent,
     NavbarComponent,
-    SettingsMenuComponent
+    SettingsMenuComponent,
+    UserInfoComponent
   ],
   imports: [
     CommonModule
   ],
-  exports: [OverlayTitleComponent, SideFilterComponent,NavbarComponent,SettingsMenuComponent]
+  exports: [OverlayTitleComponent, SideFilterComponent,NavbarComponent,SettingsMenuComponent,UserInfoComponent]
 })
 export class SharedModule { }
