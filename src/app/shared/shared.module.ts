@@ -13,6 +13,7 @@ import { InfoTitleComponent } from './components/info-title/info-title.component
 import { WarningMessageComponent } from './components/warning-message/warning-message.component';
 import { ConfirmComponent } from './components/confirm/confirm.component';
 import { AddNewItemButtonComponent } from './components/add-new-item-button/add-new-item-button.component';
+import { ShowcaseComponent } from './pages/showcase/showcase.component';
 
 
 
@@ -30,7 +31,8 @@ import { AddNewItemButtonComponent } from './components/add-new-item-button/add-
     InfoTitleComponent,
     WarningMessageComponent,
     ConfirmComponent,
-    AddNewItemButtonComponent
+    AddNewItemButtonComponent,
+    ShowcaseComponent
   ],
   imports: [
     CommonModule
