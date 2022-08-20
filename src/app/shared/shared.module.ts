@@ -6,6 +6,7 @@ import { OverlayTitleComponent } from './components/overlay-title/overlay-title.
 import { SideFilterComponent } from './components/side-filter/side-filter.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TableInfoComponent } from './components/table-info/table-info.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
@@ -16,11 +17,13 @@ import { TableInfoComponent } from './components/table-info/table-info.component
     NavbarComponent,
     SettingsMenuComponent,
     UserInfoComponent,
-    TableInfoComponent
+    TableInfoComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule
   ],
-  exports: [OverlayTitleComponent, SideFilterComponent,NavbarComponent,SettingsMenuComponent,UserInfoComponent,TableInfoComponent]
+  exports: [OverlayTitleComponent, SideFilterComponent,NavbarComponent,SettingsMenuComponent,UserInfoComponent,TableInfoComponent,
+    NotFoundComponent]
 })
 export class SharedModule { }
