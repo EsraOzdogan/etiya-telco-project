@@ -7,6 +7,7 @@ import { SideFilterComponent } from './components/side-filter/side-filter.compon
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TableInfoComponent } from './components/table-info/table-info.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ContainerComponent } from './components/container/container.component';
 
 
 
@@ -18,12 +19,13 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     SettingsMenuComponent,
     UserInfoComponent,
     TableInfoComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ContainerComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [OverlayTitleComponent, SideFilterComponent,NavbarComponent,SettingsMenuComponent,UserInfoComponent,TableInfoComponent,
-    NotFoundComponent]
+    NotFoundComponent,ContainerComponent]
 })
 export class SharedModule { }
