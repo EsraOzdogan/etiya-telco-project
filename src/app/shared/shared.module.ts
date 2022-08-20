@@ -11,6 +11,7 @@ import { ContainerComponent } from './components/container/container.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { InfoTitleComponent } from './components/info-title/info-title.component';
 import { WarningMessageComponent } from './components/warning-message/warning-message.component';
+import { ConfirmComponent } from './components/confirm/confirm.component';
 
 
 
@@ -26,12 +27,13 @@ import { WarningMessageComponent } from './components/warning-message/warning-me
     ContainerComponent,
     MainLayoutComponent,
     InfoTitleComponent,
-    WarningMessageComponent
+    WarningMessageComponent,
+    ConfirmComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [OverlayTitleComponent, SideFilterComponent,NavbarComponent,SettingsMenuComponent,UserInfoComponent,TableInfoComponent,
-    NotFoundComponent,ContainerComponent,MainLayoutComponent,InfoTitleComponent,WarningMessageComponent]
+    NotFoundComponent,ContainerComponent,MainLayoutComponent,InfoTitleComponent,WarningMessageComponent,ConfirmComponent]
 })
 export class SharedModule { }
