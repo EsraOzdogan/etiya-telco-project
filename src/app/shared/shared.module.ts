@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TableInfoComponent } from './components/table-info/table-info.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ContainerComponent } from './components/container/container.component';
+import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 
 
 
@@ -20,12 +21,13 @@ import { ContainerComponent } from './components/container/container.component';
     UserInfoComponent,
     TableInfoComponent,
     NotFoundComponent,
-    ContainerComponent
+    ContainerComponent,
+    MainLayoutComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [OverlayTitleComponent, SideFilterComponent,NavbarComponent,SettingsMenuComponent,UserInfoComponent,TableInfoComponent,
-    NotFoundComponent,ContainerComponent]
+    NotFoundComponent,ContainerComponent,MainLayoutComponent]
 })
 export class SharedModule { }
