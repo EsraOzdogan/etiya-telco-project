@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { OverlayTitleComponent } from './components/overlay-title/overlay-title.component';
 import { SideFilterComponent } from './components/side-filter/side-filter.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { TableInfoComponent } from './components/table-info/table-info.component';
 
 
 
@@ -14,11 +15,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     SideFilterComponent,
     NavbarComponent,
     SettingsMenuComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    TableInfoComponent
   ],
   imports: [
     CommonModule
   ],
-  exports: [OverlayTitleComponent, SideFilterComponent,NavbarComponent,SettingsMenuComponent,UserInfoComponent]
+  exports: [OverlayTitleComponent, SideFilterComponent,NavbarComponent,SettingsMenuComponent,UserInfoComponent,TableInfoComponent]
 })
 export class SharedModule { }
