@@ -10,6 +10,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ContainerComponent } from './components/container/container.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { InfoTitleComponent } from './components/info-title/info-title.component';
+import { WarningMessageComponent } from './components/warning-message/warning-message.component';
 
 
 
@@ -24,12 +25,13 @@ import { InfoTitleComponent } from './components/info-title/info-title.component
     NotFoundComponent,
     ContainerComponent,
     MainLayoutComponent,
-    InfoTitleComponent
+    InfoTitleComponent,
+    WarningMessageComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [OverlayTitleComponent, SideFilterComponent,NavbarComponent,SettingsMenuComponent,UserInfoComponent,TableInfoComponent,
-    NotFoundComponent,ContainerComponent,MainLayoutComponent,InfoTitleComponent]
+    NotFoundComponent,ContainerComponent,MainLayoutComponent,InfoTitleComponent,WarningMessageComponent]
 })
 export class SharedModule { }
