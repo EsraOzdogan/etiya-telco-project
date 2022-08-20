@@ -9,6 +9,7 @@ import { TableInfoComponent } from './components/table-info/table-info.component
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ContainerComponent } from './components/container/container.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+import { InfoTitleComponent } from './components/info-title/info-title.component';
 
 
 
@@ -22,12 +23,13 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
     TableInfoComponent,
     NotFoundComponent,
     ContainerComponent,
-    MainLayoutComponent
+    MainLayoutComponent,
+    InfoTitleComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [OverlayTitleComponent, SideFilterComponent,NavbarComponent,SettingsMenuComponent,UserInfoComponent,TableInfoComponent,
-    NotFoundComponent,ContainerComponent,MainLayoutComponent]
+    NotFoundComponent,ContainerComponent,MainLayoutComponent,InfoTitleComponent]
 })
 export class SharedModule { }
