@@ -12,6 +12,7 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 import { InfoTitleComponent } from './components/info-title/info-title.component';
 import { WarningMessageComponent } from './components/warning-message/warning-message.component';
 import { ConfirmComponent } from './components/confirm/confirm.component';
+import { AddNewItemButtonComponent } from './components/add-new-item-button/add-new-item-button.component';
 
 
 
@@ -28,12 +29,13 @@ import { ConfirmComponent } from './components/confirm/confirm.component';
     MainLayoutComponent,
     InfoTitleComponent,
     WarningMessageComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    AddNewItemButtonComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [OverlayTitleComponent, SideFilterComponent,NavbarComponent,SettingsMenuComponent,UserInfoComponent,TableInfoComponent,
-    NotFoundComponent,ContainerComponent,MainLayoutComponent,InfoTitleComponent,WarningMessageComponent,ConfirmComponent]
+    NotFoundComponent,ContainerComponent,MainLayoutComponent,InfoTitleComponent,WarningMessageComponent,ConfirmComponent,AddNewItemButtonComponent]
 })
 export class SharedModule { }
