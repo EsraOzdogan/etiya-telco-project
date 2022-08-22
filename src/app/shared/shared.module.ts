@@ -16,8 +16,11 @@ import { AddNewItemButtonComponent } from './components/add-new-item-button/add-
 import { ShowcaseComponent } from './pages/showcase/showcase.component';
 import { TableAccordionComponent } from './components/table-accordion/table-accordion.component';
 import { BarMenuComponent } from './components/bar-menu/bar-menu.component';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 
-
+import {ToastModule} from 'primeng/toast';
+import {ButtonModule} from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,10 +39,14 @@ import { BarMenuComponent } from './components/bar-menu/bar-menu.component';
     AddNewItemButtonComponent,
     ShowcaseComponent,
     TableAccordionComponent,
-    BarMenuComponent
+    BarMenuComponent,
+    ConfirmationDialogComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ToastModule,
+    ButtonModule,
+    BrowserAnimationsModule
   ],
   exports: [
     OverlayTitleComponent,
@@ -56,6 +63,7 @@ import { BarMenuComponent } from './components/bar-menu/bar-menu.component';
     ConfirmComponent,
     AddNewItemButtonComponent,
     TableAccordionComponent,
-    BarMenuComponent]
+    BarMenuComponent,
+    ConfirmationDialogComponent]
 })
 export class SharedModule { }
