@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path:'',redirectTo:'showcase',pathMatch:'full'},
-  {path:'showcase',component:ShowcaseComponent}
+  // {path:'',redirectTo:'showcase',pathMatch:'full'},
+  // {path:'showcase',component:ShowcaseComponent}
 ];
 
 @NgModule({

@@ -14,6 +14,7 @@ import { WarningMessageComponent } from './components/warning-message/warning-me
 import { ConfirmComponent } from './components/confirm/confirm.component';
 import { AddNewItemButtonComponent } from './components/add-new-item-button/add-new-item-button.component';
 import { ShowcaseComponent } from './pages/showcase/showcase.component';
+import { TableAccordionComponent } from './components/table-accordion/table-accordion.component';
 
 
 
@@ -32,12 +33,26 @@ import { ShowcaseComponent } from './pages/showcase/showcase.component';
     WarningMessageComponent,
     ConfirmComponent,
     AddNewItemButtonComponent,
-    ShowcaseComponent
+    ShowcaseComponent,
+    TableAccordionComponent
   ],
   imports: [
     CommonModule
   ],
-  exports: [OverlayTitleComponent, SideFilterComponent,NavbarComponent,SettingsMenuComponent,UserInfoComponent,TableInfoComponent,
-    NotFoundComponent,ContainerComponent,MainLayoutComponent,InfoTitleComponent,WarningMessageComponent,ConfirmComponent,AddNewItemButtonComponent]
+  exports: [
+    OverlayTitleComponent,
+    SideFilterComponent,
+    NavbarComponent,
+    SettingsMenuComponent,
+    UserInfoComponent,
+    TableInfoComponent,
+    NotFoundComponent,
+    ContainerComponent,
+    MainLayoutComponent,
+    InfoTitleComponent,
+    WarningMessageComponent,
+    ConfirmComponent,
+    AddNewItemButtonComponent,
+    TableAccordionComponent]
 })
 export class SharedModule { }
