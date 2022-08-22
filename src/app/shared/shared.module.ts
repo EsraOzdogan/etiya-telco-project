@@ -21,6 +21,7 @@ import { ConfirmationDialogComponent } from './components/confirmation-dialog/co
 import {ToastModule} from 'primeng/toast';
 import {ButtonModule} from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomToastComponent } from './components/custom-toast/custom-toast.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ShowcaseComponent,
     TableAccordionComponent,
     BarMenuComponent,
-    ConfirmationDialogComponent
+    ConfirmationDialogComponent,
+    CustomToastComponent
   ],
   imports: [
     CommonModule,
@@ -64,6 +66,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AddNewItemButtonComponent,
     TableAccordionComponent,
     BarMenuComponent,
-    ConfirmationDialogComponent]
+    ConfirmationDialogComponent,
+    CustomToastComponent]
 })
 export class SharedModule { }
