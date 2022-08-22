@@ -1,3 +1,4 @@
+import { MessageService } from 'primeng/api';
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { SettingsMenuComponent } from './components/settings-menu/settings-menu.component';
 import { NgModule } from '@angular/core';
@@ -76,6 +77,8 @@ import { OfferSelectionComponent } from './components/offer-selection/offer-sele
     CustomToastComponent,
     BasketComponent,
     TabMenuComponent,
-    OfferSelectionComponent]
+    OfferSelectionComponent],
+    providers:[MessageService]
+
 })
 export class SharedModule { }

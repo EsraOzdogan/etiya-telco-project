@@ -25,10 +25,11 @@
 .e-search-container {
     box-sizing: border-box;
     width: 332px;
-    height: 863px;
+    height: 803px;
     background: #061F3E;
     border: 2px solid #F58220;
-    border-radius: 1px
+    border-radius: 1px;
+    border-bottom: inherit;
 }
 
 .e-btn-clear {
