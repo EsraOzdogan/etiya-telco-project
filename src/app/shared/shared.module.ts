@@ -22,6 +22,7 @@ import {ToastModule} from 'primeng/toast';
 import {ButtonModule} from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomToastComponent } from './components/custom-toast/custom-toast.component';
+import { BasketComponent } from './components/basket/basket.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CustomToastComponent } from './components/custom-toast/custom-toast.com
     TableAccordionComponent,
     BarMenuComponent,
     ConfirmationDialogComponent,
-    CustomToastComponent
+    CustomToastComponent,
+    BasketComponent
   ],
   imports: [
     CommonModule,
@@ -67,6 +69,7 @@ import { CustomToastComponent } from './components/custom-toast/custom-toast.com
     TableAccordionComponent,
     BarMenuComponent,
     ConfirmationDialogComponent,
-    CustomToastComponent]
+    CustomToastComponent,
+    BasketComponent]
 })
 export class SharedModule { }
