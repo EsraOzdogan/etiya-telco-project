@@ -7,6 +7,7 @@
 @import url('../src/assets/styles/etiya-input.css');
 @import url('../src/assets/styles/etiya-title.css');
 @import url('../src/assets/styles/etiya-accordion.css');
+@import url('../src/assets/styles/etiya-menu.css');
 
 body{
   background-color: #061F3E !important;
