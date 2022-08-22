@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomToastComponent } from './components/custom-toast/custom-toast.component';
 import { BasketComponent } from './components/basket/basket.component';
 import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
+import { OfferSelectionComponent } from './components/offer-selection/offer-selection.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
     ConfirmationDialogComponent,
     CustomToastComponent,
     BasketComponent,
-    TabMenuComponent
+    TabMenuComponent,
+    OfferSelectionComponent
   ],
   imports: [
     CommonModule,
@@ -73,6 +75,7 @@ import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
     ConfirmationDialogComponent,
     CustomToastComponent,
     BasketComponent,
-    TabMenuComponent]
+    TabMenuComponent,
+    OfferSelectionComponent]
 })
 export class SharedModule { }
