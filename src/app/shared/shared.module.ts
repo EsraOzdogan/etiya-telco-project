@@ -15,6 +15,7 @@ import { ConfirmComponent } from './components/confirm/confirm.component';
 import { AddNewItemButtonComponent } from './components/add-new-item-button/add-new-item-button.component';
 import { ShowcaseComponent } from './pages/showcase/showcase.component';
 import { TableAccordionComponent } from './components/table-accordion/table-accordion.component';
+import { BarMenuComponent } from './components/bar-menu/bar-menu.component';
 
 
 
@@ -34,7 +35,8 @@ import { TableAccordionComponent } from './components/table-accordion/table-acco
     ConfirmComponent,
     AddNewItemButtonComponent,
     ShowcaseComponent,
-    TableAccordionComponent
+    TableAccordionComponent,
+    BarMenuComponent
   ],
   imports: [
     CommonModule
@@ -53,6 +55,7 @@ import { TableAccordionComponent } from './components/table-accordion/table-acco
     WarningMessageComponent,
     ConfirmComponent,
     AddNewItemButtonComponent,
-    TableAccordionComponent]
+    TableAccordionComponent,
+    BarMenuComponent]
 })
 export class SharedModule { }
