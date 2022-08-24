@@ -1,8 +1,12 @@
 import { SearchCustomer } from './../../models/searchCustomer';
 import { Customer } from './../../models/customer';
-import { Observable, Subject } from 'rxjs';
+import { catchError, Observable, retry, Subject } from 'rxjs';
 import { environment } from './../../../../../environments/environment';
-import { HttpClient } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpParams,
+} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -14,6 +18,16 @@ export class CustomersService {
 
   getList(): Observable<Customer[]> {
     return this.httpClient.get<Customer[]>(this.apiControllerUrl);
+  }
+
+  sendGetRequest(page: number = 0, pageSize: number = 20) {
+    // Add safe, URL encoded_page parameter
+    const options = {
+      params: new HttpParams({ fromString: '_page='+page+'&_limit='+pageSize }),
+    };
+    return this.httpClient
+      .get<Customer[]>(this.apiControllerUrl, options)
+      .pipe(retry(3));
   }
 
   getListByFilter(searchCustomer: SearchCustomer): Observable<Customer[]> {
@@ -41,13 +55,17 @@ export class CustomersService {
         }
 
         if (searchCustomer.firstName) {
-          filteredCustomers = filteredCustomers.filter(
-            (item) => item.firstName.toLowerCase().includes(searchCustomer.firstName.toLowerCase())
+          filteredCustomers = filteredCustomers.filter((item) =>
+            item.firstName
+              .toLowerCase()
+              .includes(searchCustomer.firstName.toLowerCase())
           );
         }
         if (searchCustomer.lastname) {
-          filteredCustomers = filteredCustomers.filter(
-            (item) => item.lastName.toLowerCase().includes(searchCustomer.lastname.toLowerCase())
+          filteredCustomers = filteredCustomers.filter((item) =>
+            item.lastName
+              .toLowerCase()
+              .includes(searchCustomer.lastname.toLowerCase())
           );
         }
         if (searchCustomer.orderNumber) {
@@ -57,16 +75,16 @@ export class CustomersService {
             )
           );
         }
-        subject.next(filteredCustomers)
-
+        subject.next(filteredCustomers);
       },
-      error:(err)=>{
-        subject.error(err)
+      error: (err) => {
+        subject.error(err);
       },
-      complete:()=>{        //en son calısan yer
-        subject.complete()
-      }
+      complete: () => {
+        //en son calısan yer
+        subject.complete();
+      },
     });
-    return subject.asObservable()
+    return subject.asObservable();
   }
 }

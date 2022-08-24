@@ -1,3 +1,4 @@
+import { ListResponseModel } from './../../models/listResponseModel';
 import { Customer } from './../../models/customer';
 import { CustomersService } from './../../services/customers/customers.service';
 import { Component, Input, OnInit } from '@angular/core';
@@ -13,6 +14,13 @@ export class CustomerDashboardComponent implements OnInit {
 
 //@Input() filteredData! : Customer[];
 
+customerListModel: ListResponseModel<Customer> = {
+  index: 0,
+  size: 20,
+  items: []
+};
+
+
   constructor(private customersService: CustomersService) { }
 
   ngOnInit(): void {
@@ -22,7 +30,7 @@ export class CustomerDashboardComponent implements OnInit {
   }
 
   getCustomersList(){
-    this.customersService.getList().subscribe(response=>{
+    this.customersService.sendGetRequest(this.customerListModel.index, this.customerListModel.size).subscribe(response=>{
       this.customerList= response
       // console.log(this.customerList)
       // console.log(this.customerList[0].addresses[0].city.name)
