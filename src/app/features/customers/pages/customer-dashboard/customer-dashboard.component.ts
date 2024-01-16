@@ -10,7 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CustomerDashboardComponent implements OnInit {
   customerList! : Customer[];
   customerList1! : Customer[];
-  lenght!:number;
+  length!:number;
 
 //@Input() filteredData! : Customer[];
 
@@ -45,7 +45,7 @@ customerListModel: ListResponseModel<Customer> = {
 
     console.log(event)
     this.customerList1 = event
-    this.lenght = this.customerList1.length
+    this.length = this.customerList1.length
 
   }
 

@@ -15,11 +15,9 @@
 
         <div class="e-search-container">
           <app-container class="e-container">
-            <div *ngIf="lenght ==0; else tableInfo ">
+            <div *ngIf="length ==0; else tableInfo ">
               <app-not-found [btnText]="'CREATE CUSTOMER'"></app-not-found>
             </div>
-
-
 
             <ng-template #tableInfo>
               <app-table-info class="e-table" >
@@ -34,7 +32,7 @@
                   </tr>
                 </thead>
                 <tbody class="table-body" >
-                  <div *ngIf="customerList1 && lenght !=0; then thenBlok else otherState">
+                  <div *ngIf="customerList1; then thenBlok else otherState">
 
                   </div>
                   <ng-template #thenBlok>

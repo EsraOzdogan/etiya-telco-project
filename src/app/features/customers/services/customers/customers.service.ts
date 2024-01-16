@@ -31,6 +31,7 @@ export class CustomersService {
   }
 
   getListByFilter(searchCustomer: SearchCustomer): Observable<Customer[]> {
+    //backend simülasyonu
     const subject = new Subject<Customer[]>();
     this.httpClient.get<Customer[]>(this.apiControllerUrl).subscribe({
       next: (response) => {
@@ -47,7 +48,6 @@ export class CustomersService {
             )
           );
         }
-
         if (searchCustomer.gsmNumber) {
           filteredCustomers = filteredCustomers.filter(
             (item) => item.contactMedium.mobilePhone == searchCustomer.gsmNumber
@@ -75,9 +75,9 @@ export class CustomersService {
             )
           );
         }
-        subject.next(filteredCustomers);
+        subject.next(filteredCustomers); //http isteginde hata olmazsa
       },
-      error: (err) => {
+      error: (err) => { //http isteginde hata olursa
         subject.error(err);
       },
       complete: () => {

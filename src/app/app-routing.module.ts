@@ -10,7 +10,7 @@ const routes: Routes = [
     path: 'dashboard',
     component: CustomerDashboardComponent,
     children: [
-       {path: '', component: CustomerDashboardComponent, pathMatch: 'full'},
+      //  {path: '', component: CustomerDashboardComponent, pathMatch: 'full'},
       {
         path: 'customers',
         loadChildren: () =>
